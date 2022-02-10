@@ -31,5 +31,5 @@ jobs:
         # Add environment variables
         env:
           CI: true
-      - name: Eslint
+      - name: Run linter
         run: make lint
