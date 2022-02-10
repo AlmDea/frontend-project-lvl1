@@ -4,10 +4,8 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -32,10 +30,15 @@ jobs:
         # Install project
     - run: |
           make install
+        # Install project
+        run: |
+          make install
         # Add environment variables
         env:
           CI: true
-    - name: Run linter
-    - run: |
+      - name: Run linter
+        # Run Linter
+        run: |
           make lint
+       
     
