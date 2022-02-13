@@ -1,9 +1,11 @@
-import newGame from '../index.js';
-import generateRandom from '../generateRandom.js';
+import engine from '../index.js';
+import randomNumber from '../generateRandom.js';
 
+// Правила игры
+const gameRules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-// calculating
+// Проверка
 const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
@@ -17,17 +19,14 @@ const calculate = (num1, num2, operator) => {
   }
 };
 
-// game task
-const task = 'What is the result of the expression?';
-
-// game logic
+// Логика игры
 const gameQuestionAnswer = () => {
-  const num1 = generateRandom(1, 20);
-  const num2 = generateRandom(1, 20);
-  const operator = operators[generateRandom(0, operators.length - 1)];
+  const num1 = randomNumber(1, 20);
+  const num2 = randomNumber(1, 20);
+  const operator = operators[randomNumber(0, operators.length - 1)];
   const question = `${num1} ${operator} ${num2}`;
   const answer = calculate(num1, num2, operator);
   return [question, String(answer)];
 };
 
-export default () => newGame(task, gameQuestionAnswer);
+export default () => engine(gameRules, gameQuestionAnswer);

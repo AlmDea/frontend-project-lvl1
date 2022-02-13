@@ -1,7 +1,7 @@
-import newGame from '../index.js';
+import engine from '../index.js';
 
-// task
-const gameQuestion = 'Find the greatest common divisor of given numbers.';
+// Правила игры и проверка числа
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const nod = (a, b) => {
   if (b !== 0) {
@@ -11,6 +11,7 @@ const nod = (a, b) => {
   return a;
 };
 
+// Логика игры
 const gameQuestionAnswer = () => {
   const num1 = Math.round(Math.random() * 100);
   const num2 = Math.round(Math.random() * 100);
@@ -19,5 +20,4 @@ const gameQuestionAnswer = () => {
   return [question, correctAnswer];
 };
 
-const greatestCommonDivisor = () => newGame(gameQuestion, gameQuestionAnswer);
-export default greatestCommonDivisor;
+export default () => engine(gameRules, gameQuestionAnswer);
