@@ -1,30 +1,33 @@
 import newGame from '../index.js';
+import generateRandom from '../generateRandom.js';
 
-const gameQuestion = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
-const operations = ['+', '-', '*'];
-
-const equation = (num1, operator, num2) => {
-  let result;
-  if (operator === '+') {
-    result = (num1 + num2);
-  } else if (operator === '-') {
-    result = (num1 - num2);
-  } else if (operator === '*') {
-    result = (num1 * num2);
+// calculating
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
-  return result;
 };
 
-const gameCheck = () => {
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
-  const randomOperation = operations[Math.round(Math.random() * operations.length)];
-  const question = `${number1}${randomOperation}${number2}`;
-  const correctAnswer = `${equation(number1, randomOperation, number2)}`;
-  return [question, correctAnswer];
-};
-console.log(gameCheck());
-const calculator = () => newGame(gameQuestion, gameCheck);
+// game task
+const task = 'What is the result of the expression?';
 
-export default calculator;
+// game logic
+const gameQuestionAnswer = () => {
+  const num1 = generateRandom(1, 20);
+  const num2 = generateRandom(1, 20);
+  const operator = operators[generateRandom(0, operators.length - 1)];
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = calculate(num1, num2, operator);
+  return [question, String(answer)];
+};
+
+export default () => newGame(task, gameQuestionAnswer);
