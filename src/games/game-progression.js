@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import engine from '../index.js';
 import randomNumber from '../generateRandom.js';
+=======
+import newGame from '../index.js';
+import generateRandom from '../generateRandom.js';
+>>>>>>> 34fb90cd66a4d0ec98e1ad84456a92dfeeca37fa
 
 // buildMathProgression
 const buildProgression = (begin, step, length) => {
