@@ -18,7 +18,7 @@ const gameQuestionAnswer = () => {
   const num2 = generateRandom(1, 100);
   const question = `${num1} ${num2}`;
   const correctAnswer = String(getGcd(num1, num2));
-  return [question, correctAnswer);
+  return [question, correctAnswer];
 };
 
 export default () => engine(gameRules, gameQuestionAnswer);
