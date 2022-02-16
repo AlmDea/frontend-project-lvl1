@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import randomNumber from '../generateRandom.js';
+import generateRandom from '../generateRandom.js';
 
 // Правила игры
 const gameRules = 'What is the result of the expression?';
@@ -21,9 +21,9 @@ const calculate = (num1, num2, operator) => {
 
 // Логика игры
 const gameQuestionAnswer = () => {
-  const num1 = randomNumber(1, 20);
-  const num2 = randomNumber(1, 20);
-  const operator = operators[randomNumber(0, operators.length - 1)];
+  const num1 = generateRandom(1, 20);
+  const num2 = generateRandom(1, 20);
+  const operator = operators[generateRandom(0, operators.length - 1)];
   const question = `${num1} ${operator} ${num2}`;
   const answer = calculate(num1, num2, operator);
   return [question, String(answer)];

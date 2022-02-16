@@ -2,8 +2,7 @@
 
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
-  browser: true
-  es2021: true
+  node: true
 
 extends:
   - 'airbnb-base' 
@@ -18,4 +17,3 @@ rules:
     - error
     - ignorePackages
     - js: always
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
