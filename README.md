@@ -6,13 +6,15 @@
 
 Installation:
 
-1.git clone git@github.com:almDea/frontend-project-lvl1.git
-
+1.git clone git@github.com:AlmDea/frontend-project-lvl1.git
 2.cd frontend-project-lvl1/
-
 3.make install
-
 4.sudo npm link
 
-Demonstration:
-https://asciinema.org/connect/e798e60c-586e-45cf-9e3c-8a4786d306bd
+Game launch:
+
+1.brain-even
+2.brain-calc
+3.brain-gcd
+4.brain-progression
+5.brain-prime
