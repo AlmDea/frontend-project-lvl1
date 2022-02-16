@@ -1,10 +1,10 @@
-import engine from '../index.js';
+import runGameEngine from '../index.js';
 import generateRandom from '../generateRandom.js';
 
 // Правила игры
 const gameRules = 'What number is missing in the progression?';
 
-// buildMathProgression
+// Проверка
 const buildProgression = (begin, step, length) => {
   const result = [];
   for (let i = 0; i < length; i += 1) {
@@ -13,12 +13,11 @@ const buildProgression = (begin, step, length) => {
   return result;
 };
 
-//
+// Логика игры
 const progressionLength = 10;
 const maxBeginItem = 100;
 const maxStep = 5;
 
-// Логика игры
 const gameQuestionAnswer = () => {
   const firstItem = generateRandom(0, maxBeginItem);
   const progressionStep = generateRandom(1, maxStep);
@@ -30,4 +29,4 @@ const gameQuestionAnswer = () => {
   return [question, String(answer)];
 };
 
-export default () => engine(gameRules, gameQuestionAnswer);
+export default () => runGameEngine(gameRules, gameQuestionAnswer);

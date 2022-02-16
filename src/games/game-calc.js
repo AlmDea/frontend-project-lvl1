@@ -1,4 +1,4 @@
-import engine from '../index.js';
+import runGameEngine from '../index.js';
 import generateRandom from '../generateRandom.js';
 
 // Правила игры
@@ -29,4 +29,4 @@ const gameQuestionAnswer = () => {
   return [question, String(answer)];
 };
 
-export default () => engine(gameRules, gameQuestionAnswer);
+export default () => runGameEngine(gameRules, gameQuestionAnswer);
