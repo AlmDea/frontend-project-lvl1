@@ -4,17 +4,24 @@
 
 [![Node CI](https://github.com/AlmDea/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/AlmDea/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
-Installation:
+# Installation:
 
-1.git clone git@github.com:AlmDea/frontend-project-lvl1.git
-2.cd frontend-project-lvl1/
-3.make install
-4.sudo npm link
+git clone
 
-Game launch:
+cd frontend-project-lvl1/
+
+make install
+
+sudo npm link
+
+# Game launch:
 
 1.brain-even
+
 2.brain-calc
+
 3.brain-gcd
+
 4.brain-progression
+
 5.brain-prime
