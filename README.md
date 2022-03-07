@@ -25,3 +25,18 @@ sudo npm link
 4.brain-progression
 
 5.brain-prime
+
+brain-even
+[![asciicast](https://asciinema.org/a/kZmH9kyq8A2gUms2wVxtj26SN.svg)](https://asciinema.org/a/kZmH9kyq8A2gUms2wVxtj26SN)
+
+brain-calc
+[![asciicast](https://asciinema.org/a/Xm8MnlZzhD8l4ceUMUFvz5ZQT.svg)](https://asciinema.org/a/Xm8MnlZzhD8l4ceUMUFvz5ZQT)
+
+brain-gcd
+[![asciicast](https://asciinema.org/a/o6qSBgrLRv0mHN2zhK2EQP3M3.svg)](https://asciinema.org/a/o6qSBgrLRv0mHN2zhK2EQP3M3)
+
+brain-progression
+[![asciicast](https://asciinema.org/a/474901.svg)](https://asciinema.org/a/474901)
+
+brain-prime
+[![asciicast](https://asciinema.org/a/474903.svg)](https://asciinema.org/a/474903)
